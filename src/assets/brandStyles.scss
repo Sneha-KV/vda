@@ -1,0 +1,62 @@
+
+$marquis-accent-color: #8B0622;
+$gaylord-accent-color: #926E49;
+
+.mc.chat {
+    // marriott marquis
+    .chat-open-icon {
+        .chat-button {
+          background: $marquis-accent-color;
+        }
+    }
+    .chat-header {
+        background: $marquis-accent-color;
+        .chat-header-logo {
+            &::before {
+                content: "邏";
+                color: white;
+            }
+            
+        }
+    }
+    .conversation {
+        .chat-chat-bot-avatar,
+        .list-header {
+            background: $marquis-accent-color !important;
+        }
+        .read-or-hide,
+        [class*="icon-"]::before  {
+            color: $marquis-accent-color;
+        }
+    }
+    
+}
+
+.ge.chat {
+    .chat-open-icon {
+        .chat-button {
+          background: $gaylord-accent-color;
+        }
+    }
+    .chat-header {
+        background: $gaylord-accent-color;
+        .chat-header-logo {
+            &::before {
+                content: "句";
+            }
+        }
+    }
+
+    .conversation {
+        .chat-chat-bot-avatar,
+        .list-header {
+            background: $gaylord-accent-color !important;
+        }
+
+        .read-or-hide,
+        [class*="icon-"]::before  {
+            color: $gaylord-accent-color
+        }
+    }
+  
+}

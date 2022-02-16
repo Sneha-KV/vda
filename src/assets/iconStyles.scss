@@ -1,0 +1,900 @@
+@font-face {
+    font-family: "MiIcons";
+    src: url("//cache.marriott.com/aka-fonts/mi-icons/mi-icons.eot") format("eot"), url("//cache.marriott.com/aka-fonts/mi-icons/mi-icons.woff2") format("woff2"), url("//cache.marriott.com/aka-fonts/mi-icons/mi-icons.woff") format("woff"), url("//cache.marriott.com/aka-fonts/mi-icons/mi-icons.ttf") format("truetype"), url("//cache.marriott.com/aka-fonts/mi-icons/mi-icons.svg#MiIcons") format("svg");
+    font-display: swap;
+}
+
+[class*="icon-"]::before {
+    display: inline-block;
+    font-family: MiIcons;
+    color: #1c1c1c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+  }
+
+  .icon-more:before {
+    content: "";
+  }
+  
+  .icon-photo-gallery:before {
+    content: "";
+  }
+  
+  .icon-share-ios:before {
+    content: "";
+  }
+  
+  .icon-visability-off:before {
+    content: "";
+  }
+  
+  .icon-hour-guarantee:before {
+    content: "";
+  }
+  
+  .icon-all-suite-room1x:before {
+    content: "";
+  }
+  
+  .icon-cash-and-points:before {
+    content: "";
+  }
+  
+  .icon-elite-status:before {
+    content: "";
+  }
+  
+  .icon-free-night-certificates:before {
+    content: "";
+  }
+  
+  .icon-gift-points1x:before {
+    content: "";
+  }
+  
+  .icon-lounge-access:before {
+    content: "";
+  }
+  
+  .icon-member-rates1x:before {
+    content: "";
+  }
+  
+  .icon-mobile-check-in:before {
+    content: "";
+  }
+  
+  .icon-more-points-on-stays:before {
+    content: "";
+  }
+  
+  .icon-priority-late-checkout:before {
+    content: "";
+  }
+  
+  .icon-suite-night-awards:before {
+    content: "";
+  }
+  
+  .icon-your-24:before {
+    content: "";
+  }
+  
+  .icon-keyless-entry:before {
+    content: "";
+  }
+  
+  .icon-add-to-calendar:before {
+    content: "";
+  }
+  
+  .icon-add-to-wallet:before {
+    content: "";
+  }
+  
+  .icon-add:before {
+    content: "";
+  }
+  
+  .icon-alert:before {
+    content: "";
+  }
+  
+  .icon-book-direct-shield:before {
+    content: "";
+  }
+  
+  .icon-buy-points:before {
+    content: "";
+  }
+  
+  .icon-apple-pay:before {
+    content: "";
+  }
+  
+  .icon-arrow-down:before {
+    content: "";
+  }
+  
+  .icon-donate-points:before {
+    content: "";
+  }
+  
+  .icon-elite-night-credit:before {
+    content: "";
+  }
+  
+  .icon-arrow-left:before {
+    content: "";
+  }
+  
+  .icon-arrow-right:before {
+    content: "";
+  }
+  
+  .icon-extra-free-nights:before {
+    content: "";
+  }
+  
+  .icon-arrow-right-cropped:before {
+    content: "";
+  }
+  
+  .icon-arrow-up:before {
+    content: "";
+  }
+  
+  .icon-avatar:before {
+    content: "";
+  }
+  
+  .icon-back-arrow:before {
+    content: "";
+  }
+  
+  .icon-lifetime:before {
+    content: "";
+  }
+  
+  .icon-back-arrow-cropped:before {
+    content: "";
+  }
+  
+  .icon-biz-chat:before {
+    content: "";
+  }
+  
+  .icon-cancel:before {
+    content: "";
+  }
+  
+  .icon-check:before {
+    content: "";
+  }
+  
+  .icon-accessibility:before {
+    content: "";
+  }
+  
+  .icon-pet-friendly:before {
+    content: "";
+  }
+  
+  .icon-parking:before {
+    content: "";
+  }
+  
+  .icon-clear:before {
+    content: "";
+  }
+  
+  .icon-collapse:before {
+    content: "";
+  }
+  
+  .icon-delete:before {
+    content: "";
+  }
+  
+  .icon-down-arrow:before {
+    content: "";
+  }
+  
+  .icon-download:before {
+    content: "";
+  }
+  
+  .icon-dropdown-down:before {
+    content: "";
+  }
+  
+  .icon-status-ambassador-elite:before {
+    content: "";
+  }
+  
+  .icon-status-cobalt:before {
+    content: "";
+  }
+  
+  .icon-status-gold-elite:before {
+    content: "";
+  }
+  
+  .icon-status-member-elite:before {
+    content: "";
+  }
+  
+  .icon-status-platinum-elite:before {
+    content: "";
+  }
+  
+  .icon-status-silver-elite:before {
+    content: "";
+  }
+  
+  .icon-status-titanium-elite:before {
+    content: "";
+  }
+  
+  .icon-dropdown-up:before {
+    content: "";
+  }
+  
+  .icon-edit-dates:before {
+    content: "";
+  }
+  
+  .icon-ultimate-reservation-guarantee:before {
+    content: "";
+  }
+  
+  .icon-vip:before {
+    content: "";
+  }
+  
+  .icon-edit:before {
+    content: "";
+  }
+  
+  .icon-feedback-happy:before {
+    content: "";
+  }
+  
+  .icon-feedback-sad:before {
+    content: "";
+  }
+  
+  .icon-filter:before {
+    content: "";
+  }
+  
+  .icon-figgy:before {
+    content: "";
+  }
+  
+  .icon-forward-arrow:before {
+    content: "";
+  }
+  
+  .icon-forward:before {
+    content: "";
+  }
+  
+  .icon-gear:before {
+    content: "";
+  }
+  
+  .icon-grid-view:before {
+    content: "";
+  }
+  
+  .icon-heart-fill:before {
+    content: "";
+  }
+  
+  .icon-heart-outline:before {
+    content: "";
+  }
+  
+  .icon-help:before {
+    content: "";
+  }
+  
+  .icon-increment-minus:before {
+    content: "";
+  }
+  
+  .icon-information:before,
+  .icon-hotel-information:before {
+    content: "";
+  }
+  
+  .icon-key-station:before {
+    content: "";
+  }
+  
+  .icon-list-view---alt:before {
+    content: "";
+  }
+  
+  .icon-list-view:before {
+    content: "";
+  }
+  
+  .icon-map-zoom:before {
+    content: "";
+  }
+  
+  .icon-menu:before {
+    content: "";
+  }
+  
+  .icon-merge:before {
+    content: "";
+  }
+  
+  .icon-minus:before {
+    content: "";
+  }
+  
+  .icon-nav---account-active:before {
+    content: "";
+  }
+  
+  .icon-nav---account-alt-active:before {
+    content: "";
+  }
+  
+  .icon-nav---account-alt:before {
+    content: "";
+  }
+  
+  .icon-bonvoy-benefits:before,
+  .icon-nav---account:before
+   {
+    content: "";
+   }
+  
+  .icon-nav---book-active:before {
+    content: "";
+  }
+  
+  .icon-nav---book:before {
+    content: "";
+  }
+  
+  .icon-nav---home-active:before {
+    content: "";
+  }
+  
+  .icon-nav---home:before {
+    content: "";
+  }
+  
+  .icon-nav---trips-active:before {
+    content: "";
+  }
+  
+  .icon-nav---trips:before {
+    content: "";
+  }
+  
+  .icon-ocr-scan-payment:before {
+    content: "";
+  }
+  
+  .icon-phone:before {
+    content: "";
+  }
+  
+  .icon-plus:before {
+    content: "";
+  }
+  
+  .icon-print:before {
+    content: "";
+  }
+  
+  .icon-search-list-sort:before {
+    content: "";
+  }
+  
+  .icon-search:before {
+    content: "";
+  }
+  
+  .icon-share:before {
+    content: "";
+  }
+  
+  .icon-sign-in:before {
+    content: "";
+  }
+  
+  .icon-spinner:before {
+    content: "";
+  }
+  
+  .icon-star:before {
+    content: "";
+  }
+  
+  .icon-up-arrow:before {
+    content: "";
+  }
+  
+  .icon-visibility:before {
+    content: "";
+  }
+  
+  .icon-website:before {
+    content: "";
+  }
+  
+  .icon-facebook:before {
+    content: "";
+  }
+  
+  .icon-foursquare:before {
+    content: "";
+  }
+  
+  .icon-google:before {
+    content: "";
+  }
+  
+  .icon-instagram:before {
+    content: "";
+  }
+  
+  .icon-linkedin:before {
+    content: "";
+  }
+  
+  .icon-messenger:before {
+    content: "";
+  }
+  
+  .icon-pinterest:before {
+    content: "";
+  }
+  
+  .icon-twitter:before {
+    content: "";
+  }
+  
+  .icon-uber:before {
+    content: "";
+  }
+  
+  .icon-vk:before {
+    content: "";
+  }
+  
+  .icon-wechat:before {
+    content: "";
+  }
+  
+  .icon-weibo:before {
+    content: "";
+  }
+  
+  .icon-youtube:before {
+    content: "";
+  }
+  
+  .icon-ambassador-left:before {
+    content: "";
+  }
+  
+  .icon-amenities:before {
+    content: "";
+  }
+  
+  .icon-art-gallery:before {
+    content: "";
+  }
+  
+  .icon-bar:before {
+    content: "";
+  }
+  
+  .icon-bath-mat:before {
+    content: "";
+  }
+  
+  .icon-bath-towel:before {
+    content: "";
+  }
+  
+  .icon-bed:before {
+    content: "";
+  }
+  
+  .icon-body-lotion:before {
+    content: "";
+  }
+  
+  .icon-breakfast:before {
+    content: "";
+  }
+  
+  .icon-business-center:before {
+    content: "";
+  }
+  
+  .icon-capacity-chart:before {
+    content: "";
+  }
+  
+  .icon-car-rental:before {
+    content: "";
+  }
+  
+  .icon-cart:before {
+    content: "";
+  }
+  
+  .icon-casino:before {
+    content: "";
+  }
+  
+  .icon-chat:before {
+    content: "";
+  }
+  
+  .icon-check-out:before {
+    content: "";
+  }
+  
+  .icon-cigar-bar:before {
+    content: "";
+  }
+  
+  .icon-city:before {
+    content: "";
+  }
+  
+  .icon-concierge-lounge:before {
+    content: "";
+  }
+  
+  .icon-concierge:before {
+    content: "";
+  }
+  
+  .icon-dental-kit:before {
+    content: "";
+  }
+  
+  .icon-device-cast:before {
+    content: "";
+  }
+  
+  .icon-dining:before {
+    content: "";
+  }
+  
+  .icon-dining-chopsticks:before {
+    content: "";
+  }
+  
+  .icon-directions:before,
+  .icon-driving-direction:before  {
+    content: "";
+  }
+  
+  .icon-do-not-disturb:before {
+    content: "";
+  }
+  
+  .icon-dry-cleaning:before {
+    content: "";
+  }
+  
+  .icon-ev-charging-station:before {
+    content: "";
+  }
+  
+  .icon-extra-towels:before {
+    content: "";
+  }
+  
+  .icon-feather-pillow:before {
+    content: "";
+  }
+  
+  .icon-free-beach-access:before {
+    content: "";
+  }
+  
+  .icon-golf:before {
+    content: "";
+  }
+  
+  .icon-hand-towels:before {
+    content: "";
+  }
+  
+  .icon-hangers:before {
+    content: "";
+  }
+  
+  .icon-high-floor:before {
+    content: "";
+  }
+  
+  .icon-iconic-landmark:before {
+    content: "";
+  }
+  
+  .icon-join-now:before {
+    content: "";
+  }
+  
+  .icon-kids-activities:before {
+    content: "";
+  }
+  
+  .icon-kitchen:before {
+    content: "";
+  }
+  
+  .icon-late-check-out:before {
+    content: "";
+  }
+  
+  .icon-laundry-services:before {
+    content: "";
+  }
+  
+  .icon-low-floor:before {
+    content: "";
+  }
+  
+  .icon-luggage:before {
+    content: "";
+  }
+  
+  .icon-maid-service:before {
+    content: "";
+  }
+  
+  .icon-make-a-green-choice:before {
+    content: "";
+  }
+  
+  .icon-map:before {
+    content: "";
+  }
+  
+  .icon-meeting-space:before {
+    content: "";
+  }
+  
+  .icon-movie-theater:before {
+    content: "";
+  }
+  
+  .icon-near-elevator:before {
+    content: "";
+  }
+  
+  .icon-nearby:before {
+    content: "";
+  }
+  
+  .icon-opt-out:before {
+    content: "";
+  }
+  
+  .icon-outdoor-grill:before {
+    content: "";
+  }
+  
+  .icon-overview:before {
+    content: "";
+  }
+  
+  .icon-parking-package:before {
+    content: "";
+  }
+  
+  .icon-plug-in-panel:before {
+    content: "";
+  }
+  
+  .icon-pool:before {
+    content: "";
+  }
+  
+  .icon-private-garden:before {
+    content: "";
+  }
+  
+  .icon-promotion-achieved:before {
+    content: "";
+  }
+  
+  .icon-requests:before {
+    content: "";
+  }
+  
+  .icon-restaurant-on-site:before {
+    content: "";
+  }
+  
+  .icon-rollaway-bed-or-cot:before {
+    content: "";
+  }
+  
+  .icon-room-ready-alerts:before {
+    content: "";
+  }
+  
+  .icon-shampoo:before {
+    content: "";
+  }
+  
+  .icon-shaving-kit:before {
+    content: "";
+  }
+  
+  .icon-sheet-set:before {
+    content: "";
+  }
+  
+  .icon-shield:before {
+    content: "";
+  }
+  
+  .icon-shoe-shine:before {
+    content: "";
+  }
+  
+  .icon-shower-cap:before {
+    content: "";
+  }
+  
+  .icon-shuttle:before,
+  .icon-public-transportation:before {
+    content: "";
+  }
+  
+  .icon-slippers:before {
+    content: "";
+  }
+  
+  .icon-smart-tv:before {
+    content: "";
+  }
+  
+  .icon-small-red-book:before {
+    content: "";
+  }
+  
+  .icon-soap:before {
+    content: "";
+  }
+  
+  .icon-tag:before {
+    content: "";
+  }
+  
+  .icon-tennis:before {
+    content: "";
+  }
+  
+  .icon-towel-set:before {
+    content: "";
+  }
+  
+  .icon-transportation:before {
+    content: "";
+  }
+  
+  .icon-upgrade-requested-left:before {
+    content: "";
+  }
+  
+  .icon-upgrade-requested:before {
+    content: "";
+  }
+  
+  .icon-valet:before {
+    content: "";
+  }
+  
+  .icon-vanity-kit:before {
+    content: "";
+  }
+  
+  .icon-wake-up-call:before {
+    content: "";
+  }
+  
+  .icon-washcloth:before {
+    content: "";
+  }
+  
+  .icon-wifi:before,
+  .icon-wifi-access:before {
+    content: "";
+  }
+  
+  .icon-location:before {
+    content: "";
+  }
+  
+  .icon-clock:before,
+  .icon-check-in-time:before,
+  .icon-check-out-time:before
+   {
+    content: "";
+  }
+  
+  .icon-airplane:before,
+  .icon-airport:before {
+    content: "";
+  }
+  
+  .icon-mail:before {
+    content: "";
+  }
+  
+  .icon-blanket:before {
+    content: "";
+  }
+  
+  .icon-comb:before {
+    content: "";
+  }
+  
+  .icon-conditioner:before {
+    content: "";
+  }
+  
+  .icon-feather-free:before {
+    content: "";
+  }
+  
+  .icon-foam-pillow:before {
+    content: "";
+  }
+  
+  .icon-fitness-center:before {
+    content: "";
+  }
+  
+  .icon-lock-open:before {
+    content: "";
+  }
+  
+  .icon-lock:before {
+    content: "";
+  }
+  
+  .icon-long-arrow-back:before {
+    content: "";
+  }
+  
+  .icon-long-arrow-forward:before {
+    content: "";
+  }
+  
+  .icon-spa:before {
+    content: "";
+  }
+  
+  .icon-globe:before {
+    content: "";
+  }
+  
+  .icon-dot:before {
+    content: "";
+  }
+  
+  .icon-marriott-international:before {
+    content: "";
+  }
