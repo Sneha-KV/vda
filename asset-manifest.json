@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/vda/static/css/main.1243a773.css",
+    "main.js": "/vda/static/js/main.4aaff5ed.js",
+    "static/js/486.b3330105.chunk.js": "/vda/static/js/486.b3330105.chunk.js",
+    "static/js/808.1fee93d8.chunk.js": "/vda/static/js/808.1fee93d8.chunk.js",
+    "static/js/375.46abecef.chunk.js": "/vda/static/js/375.46abecef.chunk.js",
+    "index.html": "/vda/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.1243a773.css",
+    "static/js/main.4aaff5ed.js"
+  ]
+}
