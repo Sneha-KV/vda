@@ -1,3 +1,4 @@
+# Run the below code to launch in your local
 var botData = window.dataLayer;
 var bot = document.createElement('iframe');
 bot.id= "chat-bot-iframe"
@@ -23,26 +24,6 @@ botIframe.contentWindow.postMessage(botData, '*');
 botIframe.style.display = 'block';
 }, 3000);
 
-
-var botData = window.dataLayer;
-var bot = document.createElement('iframe');
-bot.id= "chat-bot-iframe"
-bot.src = "http://localhost:3000/";
-bot.style.right = "24px";
-bot.style.bottom = "24px";
-bot.style.position = "fixed";
-bot.style.zIndex = "10010";
-bot.width = "100%";
-bot.height = "90%";
-bot.title="marriot-chat-frame";
-bot.style.opacity = 1;
-bot.setAttribute('botData', botData);
-document.body.appendChild(bot);
-
-
-
-
-<iframe src="http://localhost:3000" scrolling="yes" frameborder="0" id="ada-chat-frame" name="marriot-chat-frame" title="marriot-chat-frame" class="ada-chat-frame" aria-expanded="true" allowtransparency="true" allowfullscreen="true" style="position: fixed;height: 90%;right: 24px;bottom: 24px;max-width: 375px;max-height: 725px;border-radius: 14px;width: 100%;pointer-events: auto;z-index: 10010;opacity: 1;transform: translate(0px, 0px);transition: transform 300ms ease 0s, opacity 300ms ease 0s;visibility: visible;"></iframe>
 
 # Getting Started with Create React App
 

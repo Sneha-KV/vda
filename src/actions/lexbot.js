@@ -62,7 +62,7 @@ export const sendMessage = (message, sessionId = '') => async (dispatch) => {
                 window.propertyDetails.miPropertySessionAttributes = data.sessionState.sessionAttributes;
                 dispatch({
                     type: MESSAGE_SUCCESS, 
-                    payload: {messages: data.messages, sessionState: data.sessionState}
+                    payload: {messages: data.messages, sessionState: data.sessionState, requestAttributes: data.requestAttributes || null}
                 });
             }
         });
@@ -85,7 +85,7 @@ export const createSession = () =>  (dispatch) => {
             type: "SESSION_SUCCESS",
             payload: {
                 session_id: sessionId,
-                brand_code:  window.propertyDetails.propertyBrandCode
+                marsha_code:  window.propertyDetails.propertyMarshaCode
             }
         });
        
@@ -95,10 +95,10 @@ export const createSession = () =>  (dispatch) => {
 }
 
 export const getSessionInfo = () => (dispatch) => {
-    const brand = window.propertyDetails.propertyBrandCode;
-    let session_info = localStorage.getItem(`session_id_${brand}`);
+    const marsha = window.propertyDetails.propertyMarshaCode;
+    let session_info = localStorage.getItem(`session_id_${marsha}`);
     
-    if(!!localStorage.getItem(`session_id_${brand}`)) {
+    if(!!localStorage.getItem(`session_id_${marsha}`)) {
         var lexruntime = new AWS.LexRuntimeV2({apiVersion: '2020-08-07'});
         var params = {
             botId: 'UJNS4QLLJS',
@@ -111,17 +111,18 @@ export const getSessionInfo = () => (dispatch) => {
         
             if (err) {
             //alert(err.stack);
-                console.error('*-*-*-*', err);
-                localStorage.removeItem(`session_id_${brand}`);
-                localStorage.removeItem(`messages_${brand}`);
+                console.log('*-*-*-*', err);
+                localStorage.removeItem(`session_id_${marsha}`);
+                localStorage.removeItem(`messages_${marsha}`);
                 store.dispatch(createSession());
 
             }
             if (data) {
-                console.log('*****************',data);
+                console.log('**_SESSION_ACTIVE_**',data);
+                window.propertyDetails.lexUserId = session_info;
                 dispatch({
                     type: SESSION_ACTIVE, 
-                    payload: {messages: JSON.parse(localStorage[`messages_${brand}`])}
+                    payload: {messages: JSON.parse(localStorage[`messages_${marsha}`])}
                 });
             }
         });

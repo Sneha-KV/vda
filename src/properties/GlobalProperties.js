@@ -1,7 +1,7 @@
 var propertyDetails = {
-    marshaCode: "NYCMQ",
+    marshaCode: "DEFAULT",
     propertyName: '',
-    propertyBrandCode: '',
+    propertyBrandCode: 'DEFAULT',
     miPropertySessionAttributes: '',
     lexUserId : '',
     propertContactPhones: '',

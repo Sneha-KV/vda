@@ -1,7 +1,7 @@
 import React from 'react'
 
-const TextBubbles = ({message, sendHandler}) => {
-  const displayMessage = message.imageResponseCard;
+const TextBubbles = ({message, sendHandler, isBubbles}) => {
+  const displayMessage = isBubbles ? JSON.parse(message.content) : message.imageResponseCard;
   const optionClick = (text) => {
     sendHandler(text);
   }

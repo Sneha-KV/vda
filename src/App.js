@@ -36,9 +36,9 @@ const App = () => {
     if (e.data && e.data.env_is_prod === 'true') {
         // alert('It works!');
         setInitData(e.data);
-        window.propertyDetails.propertyMarshaCode = e.data.mrshaCode;
+        window.propertyDetails.propertyMarshaCode = e.data.mrshaCode || e.data.prop_marsha_code|| window.propertyDetails.propertyMarshaCode;
         window.propertyDetails.propertyName = e.data.prop_name;
-        window.propertyDetails.propertyBrandCode = e.data.brndCode;
+        window.propertyDetails.propertyBrandCode = e.data.brndCode || window.propertyDetails.propertyBrandCode;
         window.propertyDetails.sourceDomain = e.data.page_domain_name;
         AWS.config.region = 'us-east-1'; // Region
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -62,6 +62,29 @@ const App = () => {
       store.dispatch(createSession());
 
   },[initData]);
+
+  // useEffect(() => {
+  //   const dataElement = document.getElementById('chat-bot-data');
+  //   if(!dataElement) return;
+  //   const bot_data = JSON.parse(dataElement.getAttribute('data-property-info'));
+  //     setInitData(bot_data);
+  //       window.propertyDetails.propertyMarshaCode = bot_data.mrshaCode || bot_data.prop_marsha_code|| window.propertyDetails.propertyMarshaCode;
+  //       window.propertyDetails.propertyName = bot_data.prop_name;
+  //       window.propertyDetails.propertyBrandCode = bot_data.brndCode || window.propertyDetails.propertyBrandCode;
+  //       window.propertyDetails.sourceDomain = bot_data.page_domain_name;
+  //       AWS.config.region = 'us-east-1'; // Region
+  //       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+  //               IdentityPoolId: 'us-east-1:55428433-ea9e-4b6d-b60e-41e1aaf2be8d',       
+  //       });
+  //       // window.propertyDetails.lexUserId = 'MIWebPropertyBot' + Date.now();
+  //       window.propertyDetails.miPropertySessionAttributes = {
+  //           "marsha":window.propertyDetails.propertyMarshaCode,
+  //           "propertyName":window.propertyDetails.propertyName, 
+  //           "propertyBrandCode":window.propertyDetails.propertyBrandCode
+  //       };
+  //       addPropertiesScript();
+
+  // }, []);
   return (
     <Provider store={store}>
       {initData && <Chat />}
@@ -69,5 +92,7 @@ const App = () => {
     
   );
 }
+
+
 
 export default App;

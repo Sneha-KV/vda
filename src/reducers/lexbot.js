@@ -22,12 +22,12 @@ const initialState = {
 const lexMessagesActions =  (state = initialState, action ) => {
     const {type, payload} = action;
     let { messages} = state;
-    let brand = window.propertyDetails.propertyBrandCode;
+    let marsha = window.propertyDetails.propertyMarshaCode;
 
     switch(type) {
         case INPUT_SUCESS : 
             messages = [...messages, {message: payload, type: "user"}];
-            localStorage[`messages_${brand}`] = JSON.stringify(messages);
+            localStorage[`messages_${marsha}`] = JSON.stringify(messages);
             console.log(messages)
             return {
                 ...state,
@@ -38,9 +38,9 @@ const lexMessagesActions =  (state = initialState, action ) => {
                 ...state
             };
         case SESSION_SUCCESS: 
-            brand = payload["brand_code"];
-            localStorage.setItem(`session_id_${brand}`, payload["session_id"]);
-            localStorage.setItem(`messages_${brand}`, JSON.stringify(messages));
+            marsha = payload["marsha_code"];
+            localStorage.setItem(`session_id_${marsha}`, payload["session_id"]);
+            localStorage.setItem(`messages_${marsha}`, JSON.stringify(messages));
             return {
                 ...state
             };
@@ -59,7 +59,7 @@ const lexMessagesActions =  (state = initialState, action ) => {
                 message: payload,
                 type: "bot"
             }]
-            localStorage[`messages_${brand}`] = JSON.stringify(messages);
+            localStorage[`messages_${marsha}`] = JSON.stringify(messages);
             return {
                 ...state,
                 messages

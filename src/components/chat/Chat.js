@@ -38,8 +38,12 @@ const Chat = ({chat, userMessage, sendMessage}) => {
         if(code !== 13) return;
         e.target.disabled = true;
         userRequest();
-        e.target.disabled = false;
-        
+        e.target.disabled = false;  
+    }
+
+    const handleSendButtonClick = () => {
+        if(!message) return;
+        userRequest(message);
     }
 
     const requestMessage = (requestMessage) => {
@@ -107,7 +111,7 @@ const Chat = ({chat, userMessage, sendMessage}) => {
                         onKeyPress={handleClick} 
                         value={message || ""}
                         placeholder='Type a message...'/>
-                        <button type="submit" className="chat-submit" >
+                        <button type="submit" className="chat-submit" onClick={handleSendButtonClick}>
                             <img className="right-forward-arrow" alt={'send'} src="https://primepixel.net/MIBot/images/forward_arrow.svg"/>
                         </button>
                     </div>

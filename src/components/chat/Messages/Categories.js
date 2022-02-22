@@ -19,8 +19,8 @@ const Categories = ({messages, sendHandler}) => {
                 {   
                     buttonsList.buttons.slice(0, showCount).map((btn, index) => {
                     return (
-                        <button  key = {index} className={'category'} onClick={() => categoryClickHandler(btn.title)}>
-                            <span className={`icon-${btn.title.replace(" ","-").toLowerCase()}`}></span>{btn.title}
+                        <button  key = {index} className={'category'} onClick={() => categoryClickHandler(btn.text)}>
+                            <span className={`icon-${btn.text.replace(" ","-").toLowerCase()}`}></span>{btn.text}
                         </button>
                     )
                     })
