@@ -1,6 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import { connect} from "react-redux";
 
+
 import { userMessage, sendMessage } from '../../actions/lexbot';
 
 import BotResponse from './BotResponse';
@@ -8,6 +9,7 @@ import ChatHeader from './ChatHeader';
 import GlobalProperties from '../../properties/GlobalProperties';
 import UserMsgContainer from './UserMsgContainer';
 import ChatIcon from './ChatIcon';
+import botLogo from '../../assets/icons/chatmiicon.svg';
 // import Categories from './Categories';
 
 
@@ -46,15 +48,15 @@ const Chat = ({chat, userMessage, sendMessage}) => {
         userRequest(message);
     }
 
-    const requestMessage = (requestMessage) => {
+    const requestMessage = (requestMessage, messageValue ='') => {
         setMessage(requestMessage);
         setLoader(true);
-        userRequest(requestMessage);
+        userRequest(requestMessage, messageValue);
     }
 
-    const userRequest = (userText = message) => {
+    const userRequest = (userText = message, messageVal = '' ) => {
         userMessage(userText);
-        sendMessage(userText);
+        sendMessage(messageVal || userText);
         setMessage("");
     }
     
@@ -81,13 +83,15 @@ const Chat = ({chat, userMessage, sendMessage}) => {
                         <p className = "chat-header-chat-start-time date-time">{getDateandTime()}</p>
             
                         <div className="chat-response-row">
-                            
-                            <span className="chat-response-message message-text">
+                        <div className='bot-avatar-section'>
+                            <span className="chat-chat-bot-avatar">
+                                <img className={'bot-avatar'} alt ="bot-icon" src={botLogo} />
+                            </span>
+                        </div>
+                        <span className="chat-response-message message-text">
                                 {welcomeMsg}
                             </span>
-                            <span className="chat-chat-bot-avatar">
-                            <img className={'bot-avatar'} src="https://www.primepixel.net/MIBot/images/chatmiicon.svg" />
-                            </span>
+                            
                         </div>
                         { 
                             chat.length > 0 ? chat.map((msg, index) => {
@@ -112,7 +116,7 @@ const Chat = ({chat, userMessage, sendMessage}) => {
                         value={message || ""}
                         placeholder='Type a message...'/>
                         <button type="submit" className="chat-submit" onClick={handleSendButtonClick}>
-                            <img className="right-forward-arrow" alt={'send'} src="https://primepixel.net/MIBot/images/forward_arrow.svg"/>
+                            <span className="right-forward-arrow icon-forward-arrow" ></span>
                         </button>
                     </div>
                 </div>

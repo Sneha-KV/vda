@@ -1,4 +1,5 @@
 import React from 'react';
+import chatLogo from '../../assets/icons/chatLogo.png';
 
 const ChatIcon = ({handleClick}) => {
   return (
@@ -10,7 +11,7 @@ const ChatIcon = ({handleClick}) => {
         title="Chat with bot" 
         onClick={handleClick} 
         >
-        <img className="button__icon" alt="" src="https://primepixel.net/MIBot/images/ChatW.svg"/>
+        <img className="button__icon" alt="" src={chatLogo}/>
     </button>
   </>);
 };

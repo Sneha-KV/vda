@@ -1,3 +1,5 @@
+// @import '~bootstrap/scss/bootstrap.scss';
+@import url('http://fonts.cdnfonts.com/css/swiss-721-3');
 $background : #FFFFFF;
 $messageBackground: #EEEEEE;
 $userBackground: #545457;
@@ -38,7 +40,7 @@ $text-color: #231C19;
 }
 
 html *, body *{
-  font-family: 'Swiss-721', Arial, Helvetica, sans-serif;
+  font-family: 'Swiss 721', Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -47,6 +49,7 @@ body{
 
   .chat-open {
     display: block;
+   
   }
 
   .chat-close {
@@ -54,7 +57,12 @@ body{
   }
 
   .is-closed {
-    display: none !important;
+    // display: none !important;
+    // visibility: hidden !important;
+    // transition: visibility .5s, max-height .5s;
+    // max-height: 0;
+    transform: translate(9999px);
+    opacity: 0;
   }
 
   .chat-input-form,
@@ -65,7 +73,7 @@ body{
 
   .chat-open-icon {
     .chat-button {
-      background: $marquis-accent-color;
+      // background: $marquis-accent-color;
       border-radius: 50%;
       height: 3.5em;
       width: 3.5em;
@@ -83,20 +91,22 @@ body{
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 20px 4px rgb(0 0 0 / 12%);
-      // .button__icon {
-        
-      // }
+      .button__icon {
+        height: 5em;
+        width: 5em;
+      }
     }
   }
 
  .chat.message-container {
+    transition: opacity 1s linear;
     font-size: 0.875em !important;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    transition: filter 0.3s ease;
+    // transition: filter 0.3s ease;
     overflow: hidden;
     display: flex;
     // flex-direction: column;
@@ -249,6 +259,8 @@ body{
 
           // add message styles
           .chat-response-row {
+              display: flex;
+              width: 100%;
 
               .list-header,
               .category {
@@ -336,43 +348,72 @@ body{
         margin: 0px;
         position: relative;
       }
+      .bot-avatar-section {
+        display: flex;
+        align-items: flex-end;
+        max-width: 34px;
+        margin-bottom: 7px;
+      }
       .chat-chat-bot-avatar {
         // background: url('https://www.primepixel.net/MIBot/images/bot.svg') center center no-repeat;
+        display: inline-flex;
         height: 32px;
         width: 32px;
         padding-top: 2px;
         box-sizing: border-box;
         border: 1px solid #EEEEEE;
         border-radius: 50%;
-        margin-right: 6px;
+        // margin-right: 6px;
         position: relative;
         // bottom: 0;  
         float: left;
         text-align: center;
+        padding: 3px;
         .bot-avatar {
           filter: invert(1);
         }
 
       }
       .message-text {
-        margin: 0.5em 0.5em 0.5em 0;
+        margin: 0.5em;
         word-break: break-word;
       }
       .chat-response-message {
         float: right;
         padding: 1em;
-        width: 70%;
+        // width: 65%;
+        width: 100%;
         background-color: #f5f5f5;
         font-size: 14px;
         color: #231C19;
         letter-spacing: 0;
-        border-radius: 0 14px 14px 14px;
+        border-radius: 14px 14px 14px 0;
         background-color: #F8F8F8;
         margin-right: 2em;
-        // margin: 0.5em;
-        // position: absolute;
+
         &.plaintext {
           padding-top: 0;
+        }
+
+        &.carousel-elements {
+          width: 90%;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 3em;
+        }
+        .carousel-element {
+          background-color: $background;
+          border: 1px solid $messageBackground;
+          border-radius: 14px;
+          box-shadow: 0 4px 20px 0 rgb(0 0 0 / 7%);
+
+          .place-name {
+            font-size: 1.125rem;
+            font-weight: bold;
+          }
+          .cusine {
+            font-size: 0.75em;
+          }
         }
       }
 
@@ -381,7 +422,7 @@ body{
         font-size: 14px;
         letter-spacing: 0;
         line-height: 20px;
-        max-width: 75%;
+        // max-width: 75%;
         float: right;
         margin-right: 4px;
         margin-top: 6px;
@@ -392,6 +433,7 @@ body{
           padding: 1em;
           border-radius: 14px 14px 0 14px;
           background-color: $userBackground;
+          margin-left: 2.5em;
         }
       }
 
@@ -431,9 +473,11 @@ body{
         height: 100%;
         width: 20%;
         padding: 1.5em;
-        .right-forward-arrow {
-          height: 2em;
-          width: 2em;
+        .right-forward-arrow::before {
+          // height: 2em;
+          // width: 2em;
+          font-size: 2em;
+
         }
       }
       

@@ -28,7 +28,7 @@ const lexMessagesActions =  (state = initialState, action ) => {
         case INPUT_SUCESS : 
             messages = [...messages, {message: payload, type: "user"}];
             localStorage[`messages_${marsha}`] = JSON.stringify(messages);
-            console.log(messages)
+            // console.log(messages)
             return {
                 ...state,
                 messages

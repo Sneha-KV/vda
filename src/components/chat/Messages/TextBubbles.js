@@ -2,8 +2,8 @@ import React from 'react'
 
 const TextBubbles = ({message, sendHandler, isBubbles}) => {
   const displayMessage = isBubbles ? JSON.parse(message.content) : message.imageResponseCard;
-  const optionClick = (text) => {
-    sendHandler(text);
+  const optionClick = ({button}) => {
+    sendHandler(button.text, button.value);
   }
   return (
     // <span className="chat-response-message message-text">
@@ -16,7 +16,7 @@ const TextBubbles = ({message, sendHandler, isBubbles}) => {
           displayMessage.buttons.map((button, index) => {
             return (
             <div className={'display-bubble'} key={index}>
-              <button className = {'button-bubble'} onClick={() => optionClick(button.text)}>{button.text}</button>
+              <button className = {'button-bubble'} onClick={() => optionClick({button})}>{button.text}</button>
             </div>)
           })
         }

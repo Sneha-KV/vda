@@ -4,6 +4,7 @@ import './App.scss';
 import './assets/brandStyles.scss';
 import './assets/iconStyles.scss'
 import GlobalProperties from './properties/GlobalProperties';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import redux components
 import {Provider} from "react-redux";
@@ -15,6 +16,7 @@ import AWS from 'aws-sdk';
 import { createSession, getSessionInfo } from "./actions/lexbot"
 // Import Chat component
 import Chat from "./components/chat/Chat";
+
 import { useEffect } from 'react';
 
 // Connect application to redux
@@ -47,6 +49,7 @@ const App = () => {
         // window.propertyDetails.lexUserId = 'MIWebPropertyBot' + Date.now();
         window.propertyDetails.miPropertySessionAttributes = {
             "marsha":window.propertyDetails.propertyMarshaCode,
+            "marshaCode":window.propertyDetails.propertyMarshaCode,
             "propertyName":window.propertyDetails.propertyName, 
             "propertyBrandCode":window.propertyDetails.propertyBrandCode
         };
@@ -56,7 +59,7 @@ const App = () => {
 
   useEffect(() => {
     if(!initData) return;
-    if(localStorage[`session_id_${window.propertyDetails.propertyBrandCode}`]) 
+    if(localStorage[`session_id_${window.propertyDetails.propertyMarshaCode}`]) 
       store.dispatch(getSessionInfo());
     else
       store.dispatch(createSession());

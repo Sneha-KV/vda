@@ -7,22 +7,28 @@ const ReadMore = ({ children }) => {
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
+  const textMessage = <span dangerouslySetInnerHTML={{__html: isReadMore ? text.slice(0, 150) : text}}></span>
   return (
-    <p className="text">
-      {isReadMore ? text.slice(0, 150) : text}
+    <>
+   
+    <p className="text" >
+      {textMessage}
       <span onClick={toggleReadMore} className="read-or-hide">
-        {isReadMore ? "...read more" : isReadMoreNeeded ? " show less" : ""}
+        {isReadMore ? "...read more" : isReadMoreNeeded ? "...show less" : ""}
       </span>
     </p>
+    {/* </span> */}
+    </>
+    
   );
 };
 
 const PlainText = ({message}) => {
   return (
-    // <span className='chat-response-message message-text'>
-      <ReadMore>
-      {message.content}
-    </ReadMore>
+    // <span className={`chat-response-message message-text `}>
+      <ReadMore dangerously>
+        {message.content}
+      </ReadMore>
     // </span>
   )
 }

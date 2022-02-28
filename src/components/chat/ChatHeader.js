@@ -27,7 +27,7 @@ const ChatHeader = ({minimizeChat}) => {
    </div>
 </div>
       <div className='chat-title'>
-          <span className='bot-name'>VIRTUAL CONCEIRGE</span>
+          <span className='bot-name'>VIRTUAL CONCIERGE</span>
       </div>
   </div>
   );
